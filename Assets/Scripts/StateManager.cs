@@ -22,11 +22,16 @@ public class StateManager : MonoBehaviour
     private bool complete;
     public SkullGram[] skullgrams;
     public Trapdoor trapdoor;
+    public GameObject[] breakingTiles;
+    public List<Vector2> walkableData;
+    public List<Vector2> holeData;
 
     void Start()
     {
         // Initialize the game with the PlayerMovement state
         currentState = GameState.PlayerMovement;
+        walkableData = new List<Vector2>(levelData.walkable);
+        holeData = new List<Vector2>(levelData.hole);
     }
 
     void Update()
@@ -53,6 +58,11 @@ public class StateManager : MonoBehaviour
                         GameOver();
                         break;
                     }
+                    else
+                    {
+                        StartCoroutine(player.TryMoveCoroutine(new Vector3(player.position.x - 0.5f, player.position.y, player.position.z)));
+                        CalculateEnemies();
+                    }
 
                     MoveEnemies();
                 }
@@ -74,6 +84,11 @@ public class StateManager : MonoBehaviour
                         player.Fall(tarPos);
                         GameOver();
                         break;
+                    }
+                    else
+                    {
+                        StartCoroutine(player.TryMoveCoroutine(new Vector3(player.position.x + 0.5f, player.position.y, player.position.z)));
+                        CalculateEnemies();
                     }
                     MoveEnemies();
 
@@ -97,6 +112,11 @@ public class StateManager : MonoBehaviour
                         GameOver();
                         break;
                     }
+                    else
+                    {
+                        StartCoroutine(player.TryMoveCoroutine(new Vector3(player.position.x, player.position.y + 0.5f, player.position.z)));
+                        CalculateEnemies();
+                    }
                     MoveEnemies();
 
                 }
@@ -118,6 +138,11 @@ public class StateManager : MonoBehaviour
                         player.Fall(tarPos);
                         GameOver();
                         break;
+                    }
+                    else
+                    {
+                        StartCoroutine(player.TryMoveCoroutine(new Vector3(player.position.x, player.position.y - 0.5f, player.position.z)));
+                        CalculateEnemies();
                     }
                     MoveEnemies();
 
@@ -177,7 +202,26 @@ public class StateManager : MonoBehaviour
     {
         foreach(Enemy e in enemies)
         {
-            StartCoroutine(e.MoveCoroutine());
+            if(e is Imp)
+            {
+                if(CheckPossibleMovement(e, e.targetPosition))
+                {
+                    StartCoroutine(e.MoveCoroutine());
+                }
+                else if(CheckHole(e, e.targetPosition))
+                {
+                    (e as Imp).Fall(e.targetPosition);
+                }
+                else
+                {
+                    StartCoroutine(e.TryMoveCoroutine(e.targetPosition));
+                    e.targetPosition = e.position;
+                }
+            }
+            else
+            {
+                StartCoroutine(e.MoveCoroutine());
+            }
         }
     }
 
@@ -190,10 +234,20 @@ public class StateManager : MonoBehaviour
     public bool CheckPossibleMovement(Object o, Vector3 targetPosition)
     {
         Vector2 pos = new Vector2(targetPosition.x, targetPosition.y);
-        int index = Array.IndexOf(levelData.walkable, pos);
+        int index = walkableData.IndexOf(pos);
         if (index > -1)
         {
-            if(trapdoor.open && trapdoor.position == targetPosition)
+            foreach(GameObject tile in breakingTiles)
+            {
+                if(tile.transform.position == o.position)
+                {
+                    tile.GetComponent<Animator>().SetTrigger("break");
+                    walkableData.Remove(new Vector2(tile.transform.position.x, tile.transform.position.y));
+                    holeData.Add(new Vector2(tile.transform.position.x, tile.transform.position.y));
+                }
+            }
+
+            if(trapdoor.open && trapdoor.position == targetPosition && !gameover && o is Player)
             {
                 complete = true;
                 CanvasAnimator.SetTrigger("complete");
@@ -211,7 +265,7 @@ public class StateManager : MonoBehaviour
     public bool CheckHole(Object o, Vector3 targetPosition)
     {
         Vector2 pos = new Vector2(targetPosition.x, targetPosition.y);
-        int index = Array.IndexOf(levelData.hole, pos);
+        int index = holeData.IndexOf(pos);
         if (index > -1)
         {
             return true;
@@ -237,14 +291,19 @@ public class StateManager : MonoBehaviour
         {
             foreach (SkullGram g in skullgrams)
             {
-                g.Activate();
-                if (g.index != index)
+                if (!g.activated)
                 {
-                    Enemy e = g.SpawnEnemy();
-                    enemies.Add(e);
+                    g.Activate();
+                    if (g.index != index)
+                    {
+                        Enemy e = g.SpawnEnemy();
+                        enemies.Add(e);
+                    }
+                    trapdoor.Activate(0);
                 }
+
             }
-            trapdoor.Activate(0);
+
             return true;
         }
         else

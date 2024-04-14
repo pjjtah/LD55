@@ -10,6 +10,7 @@ public class SkullGram : MonoBehaviour
     public Sprite activate;
     public Vector3 position;
     public GameObject enemy;
+    public bool activated = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class SkullGram : MonoBehaviour
 
     public void Activate()
     {
+        activated = true;
         sp.sprite = activate;
     }
     public Enemy SpawnEnemy()

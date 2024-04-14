@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class Imp : Enemy
 {
+    public bool dead = false;
     public override void MoveLogic(Player player)
     {
-        switch (player.lastDirectionMoved)
+        if (!dead)
         {
-            case 0:
-                targetPosition = new Vector3(position.x, position.y - 1, position.z);
-                break;
-            case 1:
-                targetPosition = new Vector3(position.x + 1, position.y, position.z);
-                break;
-            case 2:
-                targetPosition = new Vector3(position.x, position.y + 1, position.z);
-                break;
-            case 3:
-                targetPosition = new Vector3(position.x - 1, position.y, position.z);
-                break;
+            switch (player.lastDirectionMoved)
+            {
+                case 0:
+                    targetPosition = new Vector3(position.x, position.y - 1, position.z);
+                    break;
+                case 1:
+                    targetPosition = new Vector3(position.x + 1, position.y, position.z);
+                    break;
+                case 2:
+                    targetPosition = new Vector3(position.x, position.y + 1, position.z);
+                    break;
+                case 3:
+                    targetPosition = new Vector3(position.x - 1, position.y, position.z);
+                    break;
+            }
         }
+
+    }
+
+    internal void Fall(Vector3 targetPosition)
+    {
+        transform.position = targetPosition;
+        animator.SetTrigger("death");
+        dead = true;
+        Destroy(gameObject, 1.5f);
     }
 }

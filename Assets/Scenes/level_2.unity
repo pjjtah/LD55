@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!82 &33747094 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8660703803684743252, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+  m_PrefabInstance: {fileID: 932489620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &36163087
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +173,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &281555730 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8660703804541531978, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+  m_PrefabInstance: {fileID: 932489620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &385679238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3862106078668734142, guid: f644a67e2a1022f43a28b12730cc9217, type: 3}
@@ -653,6 +663,69 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b18a4efc11005a14f91a7bbafae8fbe5, type: 3}
+--- !u!1001 &932489620
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8660703803684743252, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787825, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_Name
+      value: Audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.3399076
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1277168
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06018298
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
 --- !u!114 &1020772682 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6737892624376641067, guid: 9c648fc9e544c0f4ea96b75eacd62737, type: 3}
@@ -2216,6 +2289,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1397899965}
     - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: portal1
+      value: 
+      objectReference: {fileID: 8300000, guid: f1633710a3e6a1741be82eb4d7bc7fcc, type: 3}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: trapdoor
       value: 
       objectReference: {fileID: 1368202318}
@@ -2224,12 +2301,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 980a7e91a41448042a4df933d52bc563, type: 2}
     - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: deathAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: eaedba21b6ae0a64497b974c10ece6ab, type: 3}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: SkullsAudio
+      value: 
+      objectReference: {fileID: 1994157666}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 33747094}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: audioEffects
+      value: 
+      objectReference: {fileID: 281555730}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: CanvasAnimator
       value: 
       objectReference: {fileID: 1661085511}
     - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: skullgrams.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: portalEffect.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: skullgrams.Array.data[0]
@@ -2243,6 +2340,10 @@ PrefabInstance:
       propertyPath: skullgrams.Array.data[2]
       value: 
       objectReference: {fileID: 1020772682}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: portalEffect.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f1633710a3e6a1741be82eb4d7bc7fcc, type: 3}
     - target: {fileID: 7819838089834624175, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: m_Name
       value: StateManager
@@ -2532,6 +2633,11 @@ GameObject:
 Animator:
   m_CorrespondingSourceObject: {fileID: 3862106078668734147, guid: f644a67e2a1022f43a28b12730cc9217, type: 3}
   m_PrefabInstance: {fileID: 803882194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1994157666 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8660703804478487155, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+  m_PrefabInstance: {fileID: 932489620}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2068696457 stripped
 MonoBehaviour:

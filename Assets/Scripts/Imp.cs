@@ -5,6 +5,7 @@ using UnityEngine;
 public class Imp : Enemy
 {
     public bool dead = false;
+    public AudioSource impSound;
     public override void MoveLogic(Player player)
     {
         if (!dead)
@@ -33,6 +34,5 @@ public class Imp : Enemy
         transform.position = targetPosition;
         animator.SetTrigger("death");
         dead = true;
-        Destroy(gameObject, 1.5f);
     }
 }

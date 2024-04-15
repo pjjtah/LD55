@@ -262,7 +262,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -523125643, guid: 3c6b2b5c2c1b3ed4382c2ae3c98def52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -284,6 +284,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3862106078668734141, guid: f644a67e2a1022f43a28b12730cc9217, type: 3}
   m_PrefabInstance: {fileID: 1157979776}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &140115677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8660703804198787825, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_Name
+      value: Audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.3399076
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1277168
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06018298
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660703804198787826, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
 --- !u!114 &143802973 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6698853451561620124, guid: b18a4efc11005a14f91a7bbafae8fbe5, type: 3}
@@ -645,6 +704,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b18a4efc11005a14f91a7bbafae8fbe5, type: 3}
+--- !u!82 &449161365 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8660703804478487155, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+  m_PrefabInstance: {fileID: 140115677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &492569058 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8620917234288200192, guid: 32e6768d19983c34ba3ae1c4891de2b4, type: 3}
@@ -656,6 +720,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74bae40028f363f438d3daf4b2b80666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &497335989 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8660703803684743252, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+  m_PrefabInstance: {fileID: 140115677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &574682614 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6737892624376641067, guid: 9c648fc9e544c0f4ea96b75eacd62737, type: 3}
@@ -739,7 +808,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -523125643, guid: 3c6b2b5c2c1b3ed4382c2ae3c98def52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1073,7 +1142,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -523125643, guid: 3c6b2b5c2c1b3ed4382c2ae3c98def52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1232,6 +1301,10 @@ PrefabInstance:
       propertyPath: position.x
       value: -3
       objectReference: {fileID: 0}
+    - target: {fileID: 6737892624376641067, guid: 9c648fc9e544c0f4ea96b75eacd62737, type: 3}
+      propertyPath: position.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6737892624376641070, guid: 9c648fc9e544c0f4ea96b75eacd62737, type: 3}
       propertyPath: m_Name
       value: objects-Recovered_2 (2)
@@ -1331,7 +1404,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -523125643, guid: 3c6b2b5c2c1b3ed4382c2ae3c98def52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1343,6 +1416,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1514937395 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8660703804541531978, guid: bd728a5d91446524d924f4f943b1a110, type: 3}
+  m_PrefabInstance: {fileID: 140115677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1549506310 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6737892624376641067, guid: 9c648fc9e544c0f4ea96b75eacd62737, type: 3}
@@ -1589,7 +1667,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -523125643, guid: 3c6b2b5c2c1b3ed4382c2ae3c98def52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1658,6 +1736,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 492569058}
     - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: portal1
+      value: 
+      objectReference: {fileID: 8300000, guid: f1633710a3e6a1741be82eb4d7bc7fcc, type: 3}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: trapdoor
       value: 
       objectReference: {fileID: 143802973}
@@ -1666,12 +1748,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e06736e0b02d81e458fcf10c49019943, type: 2}
     - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: deathAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: eaedba21b6ae0a64497b974c10ece6ab, type: 3}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: SkullsAudio
+      value: 
+      objectReference: {fileID: 449161365}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 497335989}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: audioEffects
+      value: 
+      objectReference: {fileID: 1514937395}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: CanvasAnimator
       value: 
       objectReference: {fileID: 1169914290}
     - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: skullgrams.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: portalEffect.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: breakingTiles.Array.size
@@ -1693,6 +1795,10 @@ PrefabInstance:
       propertyPath: skullgrams.Array.data[3]
       value: 
       objectReference: {fileID: 1238962789}
+    - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
+      propertyPath: portalEffect.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f1633710a3e6a1741be82eb4d7bc7fcc, type: 3}
     - target: {fileID: 7819838089834624174, guid: 25aa894f040a5404b90ec46d1d41ef59, type: 3}
       propertyPath: breakingTiles.Array.data[0]
       value: 
@@ -2066,7 +2172,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -523125643, guid: 3c6b2b5c2c1b3ed4382c2ae3c98def52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3395,7 +3501,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -523125643, guid: 3c6b2b5c2c1b3ed4382c2ae3c98def52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
